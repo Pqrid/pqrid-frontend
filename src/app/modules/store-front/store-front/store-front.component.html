@@ -1,0 +1,55 @@
+<section class="store-banner">
+    <div class="container h-100">
+        <div class="row align-items-center h-100">
+            <div class="col-md-6">
+                <!-- <ul class="breadcum">
+                    <li></li>
+                </ul> -->
+                <p class="heading xl">Welcome to IKEA Inventory</p>
+                <p class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                <!-- <button class="btn btn-theme" routerLink="scan-qr">Scan Qa</button> -->
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="app-section">
+    <div class="container">
+        <div class="section-title">
+            <p class="heading lg">What are u Looking for!</p>
+        </div>
+        <div class="row store-items">
+            <div class="col-6 col-md-3" *ngFor="let item of storeitems">
+                <div class="store-item" routerLink="/pages/product-listing">
+                    <img [src]="'../../../../assets/images/store-items/'+item.itemtype+'.jpg'" alt="">
+                    <p class="text font-sb clr-primary store-item-name fs-16 p-2">{{item.itemname}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- <section class="app-section">
+    <div class="container">
+        <div class="section-title">
+            <p class="heading lg">Popular</p>
+        </div>
+        <div class="row">
+            <div class="col-6 col-md-3" *ngFor="let item of products; let i=index" routerLink="/pages/product-details">
+                <div class="products">
+                    <div class="p-item">
+                        <div class="item-header">
+                            <span class="sale" *ngIf="item.sale">Sale</span>
+                            <img class="item-image" [src]="'../../../../assets/images/inventory-items/item-'+(i+1)+'.jpg'" alt="">
+                        </div>
+                        <div class="item-body">
+                            <p class="text font-sb clr-primary store-item-name fs-16">{{item.itemname}}</p>
+                            <p class="text">Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+                            <button class="btn btn-link font-sb h-auto p-0">Find More<i class="uil uil-arrow-right"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section> -->

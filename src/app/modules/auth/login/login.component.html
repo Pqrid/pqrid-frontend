@@ -1,0 +1,64 @@
+<div class="global-container">
+  <div class="container-fluid h-100">
+    <div class="row h-100 justify-content-center">
+      <div class="col-lg-6">
+        <div class="auth-container">
+          <div class="auth-sections col-xl-6">
+            <h3 class="heading lg mb-2 ng-star-inserted">Login</h3>
+            <form class="w-100" [formGroup]="login" (ngSubmit)="loginFormSubmit()">
+              <div class="row" *ngIf="phoneExists">
+                <div class="col-6 col-md-6">
+                  <div class="form-group input">
+                    <label for="">First Name</label>
+                    <input formControlName="firstName" type="text" placeholder="First Name" id="" class="form-control input-xl " />
+                  </div>
+                </div>
+                <div class="col-6 col-md-6">
+                  <div class="form-group input">
+                    <label for="">Last Name</label>
+                    <input formControlName="lastName" type="text" placeholder="Last Name" id="" class="form-control input-xl" />
+                  </div>
+                </div>
+              </div>
+
+              <div class="form-group input">
+                <label for="">Mobile Number</label>
+                <div class="input-group">
+                  <span class="input-group-text">
+                    <img style="width: 20px;" src="../../../../assets/images/svg-country-flags/us.svg" alt="">
+                  </span>
+                  <input type="text" oninput="this.value=(parseInt(this.value)||'')" maxlength="11" formControlName="phonenumber"
+                    placeholder="+1 000 000 000" class="form-control input-xl" />
+                </div>
+              </div>
+
+              <button class="btn btn-theme btn-xl w-100" type="submit" [disabled]="!login.valid">Login</button>
+            </form>
+            <div class="otp-sec d-none">
+              <h3 class="heading lg mb-2 w-100">Login with OTP</h3>
+              <p class="text mb-1">Enter the Code from Your Mobile +1 *** *** ***</p>
+              <div class="otp">
+                <div class="form-group input d-flex gap-20">
+                  <input type="text" maxlength="1" class="form-control text-center input-xl " id="a">
+                  <input type="text" maxlength="1" class="form-control text-center input-xl " id="a">
+                  <input type="text" maxlength="1" class="form-control text-center input-xl " id="a">
+                  <input type="text" maxlength="1" class="form-control text-center input-xl " id="a">
+                  <input type="text" maxlength="1" class="form-control text-center input-xl " id="a">
+                  <input type="text" maxlength="1" class="form-control text-center input-xl " id="a">
+                </div>
+                <button type="submit" class="btn btn-theme btn-xl w-100">Login</button>
+              </div>
+              <!-- <p class="text mt-3">Didn't recieved the code yet <a href="#"><u>Resend
+                            Code</u></a>
+                    <span class="font-sb">00:20</span> 
+                </p> -->
+            </div>
+            <p class="text text-center mt-3">Having Trouble with logging in? <a target="_blank"
+                href="#"><u>Contact
+                  Us</u></a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

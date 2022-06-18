@@ -1,0 +1,323 @@
+@import "variables";
+
+/********************************/
+/**/
+.text-container {
+  >* {
+    margin-bottom: 0px;
+  }
+
+  > :last-of-type {
+    margin-bottom: 0;
+  }
+}
+
+/********************************/
+/**/
+.heading {
+  color: $text-dark;
+  font-size: 18px;
+  font-family: $font-sb;
+  margin-bottom: 0;
+  &.sm {
+    font-size: 14px;
+  }
+  &.lg {
+    font-size: 24px;
+  } 
+  &.xl {
+    font-size: 30px;
+  }  
+}
+
+.text {
+  color: $text;
+  font-size: 14px;
+  font-family: $font-r;
+  margin-bottom: 0;
+}
+
+.text-link {
+  color: $primary;
+  font-size: 14px;
+  cursor: pointer;
+  text-decoration: underline;
+  font-family: $font-m;
+  margin: 0;
+  &:hover {
+    color: $primary;
+  }
+}
+.text-hover{
+  cursor: pointer;
+  &:hover{
+    text-decoration: underline;
+  }
+}
+// .link-anchor {
+//   color: $text-light;
+//   font-size: 14px;
+//   cursor: pointer;
+//   text-decoration: underline;
+//   font-family: $font-m;
+//   margin: 0;
+//   &:hover {
+//     color: $primary;
+//     text-decoration: underline;
+//   }
+// }
+// .link-anchor-icon {
+//   color: $primary;
+//   font-size: 14px;
+//   cursor: pointer;
+//   text-decoration: none;
+//   font-family: $font-m;
+//   margin: 0;
+//   &:hover {
+//     color: $primary;
+//     text-decoration: underline;
+//   }
+// }
+/********************************/
+@mixin font-size($size) {
+  .fs-#{$size} {
+    font-size: unquote($size+px);
+  }
+}
+@include font-size(8);
+@include font-size(10);
+@include font-size(12);
+@include font-size(14);
+@include font-size(16);
+@include font-size(18);
+@include font-size(20);
+@include font-size(24);
+@include font-size(26);
+@include font-size(28);
+@include font-size(50);
+@include font-size(70);
+/********************************/
+@mixin gap($gapsize) {
+  .gap-#{$gapsize} {
+    gap: unquote($gapsize+px);
+  }
+}
+@include gap(0);
+@include gap(5);
+@include gap(10);
+@include gap(15);
+@include gap(20);
+@include gap(25);
+@include gap(30);
+@include gap(35);
+@include gap(40);
+/********************************/
+/**/
+@mixin font-weight($size) {
+  .fw-#{$size} {
+    font-weight: $size;
+  }
+}
+@include font-weight(400);
+@include font-weight(500);
+@include font-weight(600);
+@include font-weight(700);
+@include font-weight(800);
+@include font-weight(900);
+/********************************/
+/**/
+.font-r {
+  font-family: $font-r;
+}
+.font-m {
+  font-family: $font-m;
+}
+.font-sb {
+  font-family: $font-sb;
+}
+.font-b {
+  font-family: $font-b;
+}
+.font-l {
+  font-family: $font-l;
+}
+.font-i {
+  font-family: $font-i;
+}
+/********************************/
+/*Colors*/
+.clr-primary {
+  color: $theme-primary;
+}
+.clr-text {
+  color: $text;
+}
+.clr-light {
+  color: $text-light;
+}
+.clr-dark {
+  color: $text-dark;
+}
+.clr-success {
+  color: $text-success;
+}
+.clr-danger {
+  color: $text-danger;
+}
+.clr-warning {
+  color: $warning;
+}
+.clr-gray-200 {
+  color: $gray-200;
+}
+.clr-gray-500 {
+  color: $gray-500;
+}
+.clr-gray-600 {
+  color: $gray-600;
+}
+
+/********************************/
+/*Back-Ground Colors*/
+.bg-primary {
+  background: $theme-primary;
+}
+.bg-secondary {
+  background: $secondary;
+}
+.bg-secondary-light {
+  background: $secondary-light;
+}
+.bg-light-blue{
+  background: #EFF5FF;
+}
+.bg-danger {
+  background: $danger;
+}
+.bg-danger-light{
+  background: $danger-light-2
+}
+.bg-warning {
+  background: $warning;
+}
+.bg-success {
+  background: $success;
+  background-color: $success;
+}
+.bg-gray-100 {
+  background: $gray-100;
+}
+.bg-gray-200 {
+  background: $gray-200;
+}
+.bg-gray-300 {
+  background: $gray-300;
+}
+/********************************/
+/**/
+.shadow-1 {
+  box-shadow: 0px 2px 4px #1315231a;
+}
+
+/********************************/
+/*Borders Styles*/
+.border-1 {
+  border: 1px solid #DFEBF7 !important;
+}
+
+.border-2 {
+  border: 2px solid #DFEBF7 !important;
+}
+
+/********************************/
+/*opacity*/
+.opacity-0 {
+  opacity: 0;
+}
+.opacity-1 {
+  opacity: 0.2;
+}
+.opacity-2 {
+  opacity: 0.4;
+}
+.opacity-3 {
+  opacity: 0.6;
+}
+.opacity-4 {
+  opacity: 0.8;
+}
+.opacity-5 {
+  opacity: 1;
+}
+/********************************/
+@media only screen and (max-width: 600px) {
+  .w-sm-100 {
+    width: 100% !important;
+  }
+}
+@media only screen and (max-width: 1100px) {
+  .w-md-100 {
+    width: 100% !important;
+  }
+}
+/********************************/
+/**/
+
+
+.cursor-pointer {
+  cursor: pointer;
+}
+.content-separator{
+  border-top: 2px solid #E2E8F0;
+  &.sm{
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+  }
+}
+.dialog-container {
+  display: block;
+  max-height: 60vh;
+  overflow: hidden;
+  overflow-y: auto;
+  margin: 0 -15px;
+  padding: 0 15px;
+}
+
+@media (max-width: 600px) {
+  .dialog-container {
+    max-height: 35vh;
+  }
+}
+
+
+
+
+/*App Scroll*/
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+  border-radius: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #EBF2FA;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #A6B7D4;
+  border-radius: 10px;
+  cursor: pointer !important;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #A0AEC0;
+}
+
+
+.uil {
+  line-height: 1;
+}
+

@@ -1,0 +1,22 @@
+/* You can add global styles to this file, and also import other style files */
+
+/* Importing Bootstrap SCSS file. */
+@import '~bootstrap/scss/bootstrap';
+
+html, body { height: 100%; }
+body { margin: 0; }
+
+/*Fonts*/
+@import 'assets/styles/fonts';
+/*Icons*/
+@import 'assets/icons/fontawesome/css/all.min.css';
+@import url(https://unicons.iconscout.com/release/v4.0.0/css/line.css);
+@import 'assets/icons/icomoon/icons/style.css';
+/*Styles*/
+@import 'assets/styles/ul-elements/ui-elements.scss';
+@import 'assets/styles/app-widgets';
+@import 'assets/styles/utilities';
+/*Swiper*/
+@import 'swiper/scss';
+@import 'swiper/scss/navigation';
+@import 'swiper/scss/pagination';

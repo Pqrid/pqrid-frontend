@@ -1,0 +1,69 @@
+<section class="store-banner">
+    <div class="container h-100">
+        <div class="row align-items-center h-100">
+            <div class="col-md-6">
+                <!-- <ul class="breadcum">
+                    <li></li>
+                </ul> -->
+                <p class="heading xl">IKEA Sofa Collections</p>
+                
+            </div>
+        </div>
+    </div>
+</section>
+<section class="app-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3 mb-2 mb-md-0">
+               <div class="d-none d-md-block">
+                    <app-product-filters></app-product-filters>
+               </div>
+               <div class="d-block d-md-none">
+                   <button class="btn btn-theme" (click)="bottomPanel(true)"><i class="fas fa-filter"></i>Filters</button>
+               </div>
+            </div>
+            <div class="col-md-9">
+                <div class="row">
+                    <div class="col-md-12 d-flex justify-content-between mb-2">
+                    <p class="heading"></p>
+                        <p class="text">Sort by: Most Popular</p>
+                    </div>
+                    <div class="col-6 col-md-3" *ngFor="let item of products;let i=index;" routerLink="/pages/product-details">
+                        <div class="products">
+                            <div class="p-item">
+                                <div class="item-header">
+                                    <span class="sale" *ngIf="item.sale">Sale</span>
+                                    <img class="item-image" [src]="'../../../../assets/images/inventory-items/item-'+(i+1)+'.jpg'" alt="">
+                                </div>
+                                <div class="item-body">
+                                    <p class="text font-sb clr-primary store-item-name fs-16">{{item.itemname}}</p>
+                                    <p class="text fs-12 prod-desp">Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+                                    <button class="btn btn-link font-sb h-auto p-0">Read More<i class="uil uil-arrow-right"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<div class="bottom-overlay-panel" [ngClass]="{ 'show-bottom-panel': bottompanel }">
+    <div class="bottom-panel">
+        <div class="bottom-panel-content">
+            <div class="bottom-panel-content-header">
+                <span></span>
+            </div>
+            <div class="bottom-panel-content-body">
+                <div class="bottom-panel-content-body-scroll">
+                    <app-product-filters></app-product-filters>
+                </div>
+                <div class="d-flex flex-nowrap gap-2">
+                    <button class="btn btn-secondary flex-grow-1" (click)="bottomPanel(false)">Close Filters</button>
+                    <button class="btn btn-theme flex-grow-1">Apply Filters</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="overlay" (click)="bottomPanel(false)"></div>
+</div>

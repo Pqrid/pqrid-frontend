@@ -1,0 +1,126 @@
+.global-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+    overflow: hidden;
+    height: 100%;
+  }
+  
+  /**** Styling or backgrounds*/
+  .login-bg {
+    &.daoproptech {
+      background: #f7fafc;
+    }
+    &.tahirbuilders{
+      background: #F7FBFA;
+    }
+    &.tajbuilder{
+      background: #4a494d0a;
+    }
+    .login-abstract-1 {
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+    
+    .login-abstract-2 {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+    }
+    .login-bg-container{
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      .login-container-logo{
+        width: 250px;
+        height: 250px;
+        img{
+          width: 100%;
+          height: 100%;
+          object-fit: contain;
+        }
+      }
+    }
+  }
+  .auth-container{
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      .auth-sections{
+          height: 500px;
+      @media only screen and (max-width: 600px) {
+        padding: 0;
+      }
+      }
+  }
+  
+  // .amna-h .login-bg{background: #F7FBFA;}
+  // .ud .login-bg{background: #FFFBF9;}
+  // .kkd .login-bg{background: #F7FAFC ;}
+  
+  /**** Styling elements styling backgrounds*/
+  
+  .login-or {
+    position: relative;
+    color: #425466;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+  .span-or {
+    display: block;
+    position: absolute;
+    left: 50%;
+    top: -2px;
+    margin-left: -25px;
+    background-color: #fff;
+    width: 50px;
+    text-align: center;
+  }
+  .hr-or {
+    height: 1px;
+    margin-top: 0px !important;
+    margin-bottom: 0px !important;
+  }
+   
+  .otp {
+  //   position: relative;
+  //   width: 320px;
+  //   margin: 0 auto;
+  //   width: 100%;
+  }
+  .otp-form input {
+  
+  }
+  
+  ::ng-deep {
+    .iti.iti--allow-dropdown {
+      width: 100%;
+    }
+  }
+  ::ng-deep{
+    .tabs-round-buttons{
+      .mat-tab-header-pagination{
+        display: none !important;
+      }
+      .mat-tab-header {
+        .mat-tab-labels {
+          .mat-tab-label{
+           min-width: 80px;
+            .mat-tab-label-content{
+              @media only screen and (max-width: 600px) {
+                font-size: 10px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  
+  

@@ -1,0 +1,189 @@
+<section class="app-section">
+    <div class="container">
+        <div class="row justify-content-between">
+            <div class="col-md-6">
+               <div class="row flex-column-reverse flex-md-row">
+                   <div class="col-md-3">
+                    <swiper
+                    (swiper)="thumbsSwiper = $event"
+                    [config]="appSwiperThumb"
+                   
+                    class="app-swiper-thumb">
+                    <ng-template swiperSlide *ngFor="let item of products;let i=index">
+                        <img class="item-image" [src]="'../../../../assets/images/inventory-items/item-'+(i+1)+'.jpg'" alt="">
+                    </ng-template>
+                    
+                  </swiper>
+                   </div>
+                   <div class="col-md-9">
+                    <swiper
+                    class="app-swiper-main"
+                    [loop]="true"
+                    [spaceBetween]="10"
+                    [navigation]="true"
+                    [thumbs]="{ swiper: thumbsSwiper }">
+                    <ng-template swiperSlide *ngFor="let item of products;let i=index">
+                        <img class="item-image" [src]="'../../../../assets/images/inventory-items/item-'+(i+1)+'.jpg'" alt="">
+                    </ng-template>
+                  
+                    </swiper> 
+                   </div>
+               </div>
+             
+            
+            </div>
+            <div class="col-md-6 mt-3 mt-md-0">
+                <p class="heading xl mb-1">Modern Chair</p>
+                <div class="d-flex justify-content-between align-items-center">
+                    <div class="d-flex align-items-center gap-2">
+                        <p class="heading lg">$ 115.00</p>
+                        <p class="heading clr-light sm"><del>$ 150.00</del></p>
+                    </div>
+                    <div class="d-flex gap-2">
+                        <div class="rating-stars">
+                            <i class="fas fa-star fill"></i>
+                            <i class="fas fa-star fill"></i>
+                            <i class="fas fa-star fill"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p class="heading clr-light sm">3.0</p>
+                        <!-- <p class="text clr-dark font-m text-hover">Write a review</p> -->
+                    </div>
+                </div>
+               
+                <hr>
+                <div class="select-color">
+                    <p class="text font-m mb-2">Color: <span class="clr-primary font-sb">White</span></p>
+                    <div class="colors">
+                        <div>
+                            <input type="radio" name="selectcolor" value="color1" id="color1">
+                            <label for="color1" style="background: #ADA48F;"></label>
+                        </div>
+                        <div>
+                            <input type="radio" name="selectcolor" value="color2" id="color2">
+                            <label for="color2" style="background: #999DA7;"></label>
+                        </div>
+                        <div>
+                            <input type="radio" name="selectcolor" value="color3" id="color3">
+                            <label for="color3" style="background: #D6DBDD;"></label>
+                        </div>
+                    </div>
+                </div>
+                <hr>
+                <div class="btns-group f-g-1">
+                    <button class="btn btn-theme-outline btn-icon btn-lg">
+                        <i class="uil uil-shopping-cart"></i>
+                    </button>
+                    <button class="btn btn-theme-outline btn-icon btn-lg">
+                        <i class="uil uil-heart-alt"></i>
+                    </button>
+                    <button class="btn btn-theme-outline btn-icon btn-lg">
+                        <i class="uil uil-question"></i>
+                    </button>
+                    <button class="btn btn-theme-outline btn-icon btn-lg" (click)="bottomPanel(true)">
+                        <i class="uil uil-ellipsis-v"></i>
+                    </button>
+                   
+                </div>
+                <hr>
+                <p class="text">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
+                    Odio natus magnam fuga libero, 
+                    rem nostrum officia incidunt aliquam alias nulla, 
+                    tempore deserunt necessitatibus amet dolores, 
+                    vitae minima magni! Assumenda, quos!
+                </p>
+            </div>
+        </div>
+        <div class="row mt-3 d-none">
+            <div class="col-md-12">
+                <mat-tab-group class="tabs-underline-buttons">
+                    <mat-tab label="Product Info">
+                        <p class="text mb-3">
+                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil repudiandae distinctio alias deleniti cupiditate iusto, quae blanditiis labore ea? Veritatis, vero? Minima in laboriosam ex culpa odio mollitia molestias voluptas.Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil repudiandae distinctio alias deleniti cupiditate iusto, quae blanditiis labore ea? Veritatis, vero? Minima in laboriosam ex culpa odio mollitia molestias voluptas.
+                        </p>
+                        <ul style="list-style: none;" class="p-0 m-0">
+                            <li><p class="text">Length: 74cm</p></li>
+                            <li><p class="text">Width: 74cm</p></li>
+                            <li><p class="text">Color: Green, Gray, Pink, Beige, Purple, Coffee</p></li>
+                            <li><p class="text">Material: Crystal velvet, Polyester</p></li>
+                            <li><p class="text">Non-slip bottom design.</p></li>
+                            <li><p class="text">It's very comfortable to sit on.</p></li>
+                            <li><p class="text">Give your home an instant makeover, perfect for home decoration.</p></li>
+                        </ul>
+                    </mat-tab>
+                    <mat-tab label="Reviews [3]">
+                       
+                    </mat-tab>
+                    <!-- <mat-tab label="Second"> Content 2 </mat-tab>
+                    <mat-tab label="Third"> Content 3 </mat-tab> -->
+                  </mat-tab-group>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="app-section d-none">
+    <div class="container">
+        <div class="section-title">
+            <p class="heading lg">You might like</p>
+        </div>
+        <div class="row">
+            <div class="col-6 col-md-3" *ngFor="let item of products;let i=index">
+                <div class="products">
+                    <div class="p-item">
+                        <div class="item-header">
+                            <span class="sale" *ngIf="item.sale">Sale</span>
+                            <img class="item-image" [src]="'../../../../assets/images/inventory-items/item-'+(i+1)+'.jpg'" alt="">
+                        </div>
+                        <div class="item-body">
+                            <p class="text font-sb clr-primary store-item-name fs-16">{{item.itemname}}</p>
+                            <p class="text">Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+                            <button class="btn btn-link font-sb h-auto p-0">Find More<i class="uil uil-arrow-right"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="bottom-overlay-panel sm" [ngClass]="{ 'show-bottom-panel': bottompanel }">
+    <div class="bottom-panel">
+        <div class="bottom-panel-content">
+            <div class="bottom-panel-content-header">
+                <span></span>
+            </div>
+            <div class="bottom-panel-content-body">
+                <div class="bottom-panel-content-body-scroll">
+                    <div class="product-help mt-3">
+                        <div>
+                            <div class="help-icon">
+                                <i class="fas fa-shield-alt"></i>
+                            </div>
+                            <p class="text fs-12 font-m mt-1">Warranty Info</p>
+                        </div>
+                        <div>
+                            <div class="help-icon">
+                                <i class="fas fa-bullhorn"></i>
+                            </div>
+                            <p class="text fs-12 font-m mt-1">Promotions</p>
+                        </div>
+                        <div routerLink="/pages/product-reviews">
+                            <div class="help-icon">
+                                <i class="icon-feedback"></i>
+                            </div>
+                            <p class="text fs-12 font-m mt-1">Reviews</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- <div class="d-flex flex-nowrap gap-2">
+                    <button class="btn btn-secondary flex-grow-1" (click)="bottomPanel(false)">Close Filters</button>
+                    <button class="btn btn-theme flex-grow-1">Apply Filters</button>
+                </div> -->
+            </div>
+        </div>
+    </div>
+    <div class="overlay" (click)="bottomPanel(false)"></div>
+</div>

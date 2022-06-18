@@ -1,0 +1,57 @@
+<div class="app-section">
+    <div class="container">
+        <div class="row">
+            <div class="section-title">
+                <p class="heading lg">Your Scan Items</p>
+            </div>
+            <div class="col-6 col-md-3" *ngFor="let item of products;let i=index;" routerLink="/pages/product-details">
+                <div class="products">
+                    <div class="p-item">
+                        <div class="item-header">
+                            <span class="sale" *ngIf="item.sale">Sale</span>
+                            <img class="item-image" [src]="'../../../../assets/images/inventory-items/item-'+(i+1)+'.jpg'" alt="">
+                        </div>
+                        <div class="item-body">
+                            <div class="d-flex align-items-center justify-content-between">
+                                <p class="text font-sb clr-primary fs-16">{{item.itemname}}</p>
+                                <p class="text font-sb clr-primary">$ 299.00</p>
+                            </div>
+                            <p class="text fs-12"><span class="font-sb">Store:</span> Ikea</p>
+                            <p class="text fs-12"><span class="font-sb">Location:</span> 96-05 Queens Blvd, Queens, NY 11374, United States</p>
+                            <button class="btn btn-link font-sb h-auto p-0">Read More<i class="uil uil-arrow-right"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="scan-lists d-none">
+    <div class="scan-item" *ngFor="let item of products;let i=index;" routerLink="/pages/product-details">
+        <div class="item-header">
+            <!-- <span class="sale" *ngIf="item.sale">Sale</span> -->
+            <img class="item-image" [src]="'../../../../assets/images/inventory-items/item-'+(i+1)+'.jpg'" alt="">
+        </div>
+        <div class="item-body">
+            <div class="d-flex align-items-center justify-content-between">
+              <p class="text font-sb clr-primary store-item-name fs-16">{{item.itemname}}</p>
+              <p class="text font-sb clr-primary store-item-name fs-16">$ 60.00</p>
+            </div>
+            <p class="text"><span class="font-m">Store Name:</span> Candian Tyres</p>
+            <p class="text text-truncate">Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+            <div class="d-flex gap-2">
+              <div class="rating-stars">
+                  <i class="fas fa-star fill"></i>
+                  <i class="fas fa-star fill"></i>
+                  <i class="fas fa-star fill"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+              </div>
+              <p class="heading clr-light sm">3.0</p>
+          </div>
+            <!-- <button class="btn btn-link font-sb h-auto p-0">Read More<i class="uil uil-arrow-right"></i></button> -->
+        </div>
+    </div>
+  </div>
